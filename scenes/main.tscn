@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dp05mvx5klo6r"]
+
+[ext_resource type="Script" uid="uid://dqgijjnpeif46" path="res://scripts/main.gd" id="1_o5qli"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5qli"]
+bg_color = Color(0.29411766, 0.15686275, 0.50980395, 1)
+
+[node name="main" type="Node" unique_id=1413295910]
+script = ExtResource("1_o5qli")
+
+[node name="Control" type="Control" parent="." unique_id=1857647845]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control" unique_id=1926620089]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o5qli")
