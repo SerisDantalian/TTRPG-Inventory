@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://b02bm45mvx8ky"]
+
+[ext_resource type="Script" uid="uid://cwrw2uipunnpx" path="res://scripts/main_menu/menu_button.gd" id="1_cav3p"]
+[ext_resource type="Texture2D" uid="uid://bo7fc0jlcptj" path="res://assets/icon.svg" id="2_c2m14"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2m14"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2uxog"]
+bg_color = Color(0.19607843, 0.24705882, 1, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 1
+border_color = Color(0.8, 0.8, 0.8, 0)
+shadow_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fjcwg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pmtk3"]
+
+[node name="MenuButton" type="Control" unique_id=640996374]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_cav3p")
+buttonIcon = ExtResource("2_c2m14")
+
+[node name="Button" type="Button" parent="." unique_id=1284090346]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 1
+anchors_preset = -1
+offset_left = -12.0
+offset_right = 12.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/icon_max_width = 24
+theme_override_font_sizes/font_size = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_c2m14")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2uxog")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fjcwg")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pmtk3")
+icon = ExtResource("2_c2m14")
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Label" type="Label" parent="Button" unique_id=576464551]
+custom_minimum_size = Vector2(36, 12)
+layout_mode = 0
+offset_left = -6.0
+offset_top = 24.0
+offset_right = 30.0
+offset_bottom = 36.0
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 0
+theme_override_font_sizes/font_size = 6
+text = "WIP"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
