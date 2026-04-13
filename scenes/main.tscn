@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://dp05mvx5klo6r"]
+
+[ext_resource type="Script" uid="uid://dqgijjnpeif46" path="res://scripts/main.gd" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://b02bm45mvx8ky" path="res://scenes/main_menu/menu_button.tscn" id="2_0wfyh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5qli"]
+bg_color = Color(0.29411766, 0.15686275, 0.50980395, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0wfyh"]
+
+[node name="main" type="Node" unique_id=1413295910]
+script = ExtResource("1_o5qli")
+
+[node name="Control" type="Control" parent="." unique_id=1857647845]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control" unique_id=1926620089]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_o5qli")
+
+[node name="MainContainer" type="VBoxContainer" parent="Control" unique_id=1953379293]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/MainContainer" unique_id=201409586]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0wfyh")
+
+[node name="Title" type="Label" parent="Control/MainContainer/PanelContainer" unique_id=1748633900]
+custom_minimum_size = Vector2(180, 50)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 10
+text = "TTRPG Inventory"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/MainContainer" unique_id=211553718]
+custom_minimum_size = Vector2(180, 280)
+layout_mode = 2
+size_flags_horizontal = 4
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="Control/MainContainer/ScrollContainer" unique_id=1712699442]
+custom_minimum_size = Vector2(180, 280)
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="Control/MainContainer/ScrollContainer/CenterContainer" unique_id=1472409672]
+custom_minimum_size = Vector2(60, 280)
+layout_mode = 2
+theme_override_constants/h_separation = 60
+theme_override_constants/v_separation = 60
+columns = 2
+
+[node name="MenuButton" parent="Control/MainContainer/ScrollContainer/CenterContainer/GridContainer" unique_id=640996374 instance=ExtResource("2_0wfyh")]
+layout_mode = 2
+buttonText = "DnD 5e [WIP]"
+
+[node name="MenuButton2" parent="Control/MainContainer/ScrollContainer/CenterContainer/GridContainer" unique_id=293103608 instance=ExtResource("2_0wfyh")]
+layout_mode = 2
+buttonText = "DnD One [WIP]"
+
+[node name="MenuButton3" parent="Control/MainContainer/ScrollContainer/CenterContainer/GridContainer" unique_id=2094355300 instance=ExtResource("2_0wfyh")]
+layout_mode = 2
+buttonText = "Munchkin [WIP]"
+
+[node name="CenterContainer" type="MarginContainer" parent="Control/MainContainer" unique_id=1491378423]
+custom_minimum_size = Vector2(60, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/margin_top = 10
+
+[node name="MenuButton" parent="Control/MainContainer/CenterContainer" unique_id=1678406507 instance=ExtResource("2_0wfyh")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+buttonText = "Settings [WIP]"
